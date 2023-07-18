@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Dynamic Banner</masterLabel>
+    <description>This is dynamic component for displaying a banner on record pages.</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="bannerType" label="Banner Type" type="String" description="Type of banner. (base, warning, or error)"/>
+            <property name="assistiveText" label="Assistive Text" type="String" description="Assistive text for impared users."/>
+            <property name="message" label="Banner Message" type="String" required='true' description="Message to be displayed in the banner." />
+            <property name="icon" label="SLDS Icon" type="String"  description="Icon to show in front of message text. (ex. action:approval, standard:account, utility:error, utility:warning)"/>
+            <property name="iconDescription" label="Icon Description" type="String"  description="Icon description for impared users."/>
+        </targetConfig>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="bannerType" label="Banner Type" type="String" description="Type of banner. (base, warning, or error)"/>
+            <property name="assistiveText" label="Assistive Text" type="String" description="Assistive text for impared users."/>
+            <property name="message" label="Banner Message" type="String" required='true' description="Message to be displayed in the banner." />
+            <property name="icon" label="SLDS Icon" type="String"  description="Icon to show in front of message text. (ex. action:approval, standard:account, utility:error, utility:warning)"/>
+            <property name="iconDescription" label="Icon Description" type="String"  description="Icon description for impared users."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

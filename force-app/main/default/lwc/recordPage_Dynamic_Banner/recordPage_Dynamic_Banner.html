@@ -1,0 +1,61 @@
+<!--
+  @description       : 
+  @author            : miller_james@bah.com
+  @group             : 
+  @last modified on  : 07-18-2023
+  @last modified by  : miller_james@bah.com
+-->
+<template>
+    <template if:true={info}>
+        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_info"
+            role="status">
+            <div class="slds-align_absolute-center">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name={icon} alternative-text={iconDescription} variant="inverse" title={iconDescription}></lightning-icon>
+                </div>
+                <div class="slds-media__body slds-text-heading_small">
+                    <p>{message}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={success}>
+        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_success"
+            role="status">
+            <div class="slds-align_absolute-center">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name={icon} alternative-text={iconDescription} variant="inverse" title={iconDescription}></lightning-icon>
+                </div>
+                <div class="slds-media__body slds-text-heading_small">
+                    <p>{message}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={warning}>
+        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_warning"
+            role="status">
+            <div class="slds-align_absolute-center">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name={icon} alternative-text={iconDescription} variant="inverse" title={iconDescription}></lightning-icon>
+                </div>
+                <div class="slds-media__body slds-text-heading_small">
+                    <p>{message}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={error}>
+        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_error"
+            role="status">
+            <div class="slds-align_absolute-center">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name={icon} alternative-text={iconDescription} variant="inverse" title={iconDescription}></lightning-icon>
+                </div>
+                <div class="slds-media__body slds-text-heading_small">
+                    <p>{message}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>
